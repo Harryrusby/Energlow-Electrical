@@ -120,8 +120,8 @@ nav{
 
 /* ABOUT */
 .about{background:#fff;padding:80px 0}
-.about-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
-.about-img-wrap{position:relative}
+.about-inner{display:flex;flex-direction:column;align-items:center;gap:40px;text-align:center;max-width:680px;margin:0 auto}
+.about-img-wrap{position:relative;width:100%;max-width:360px;margin:0 auto}
 .about-img-frame{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:3/4;max-height:520px;border:1px solid var(--border)}
 .about-img-frame img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .about-img-badge{position:absolute;bottom:20px;left:20px;right:20px;background:var(--blue-mid);color:#fff;padding:14px 16px;border-radius:6px;display:flex;align-items:center;justify-content:space-between}
@@ -129,8 +129,8 @@ nav{
 .badge-title{font-size:12px;opacity:0.75;margin-top:2px}
 .about-content h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,5vw,46px);font-weight:700;line-height:1;margin-bottom:16px}
 .about-content p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:12px}
-.about-details{margin-top:24px;display:flex;flex-direction:column;gap:12px}
-.about-detail{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--text)}
+.about-details{margin-top:24px;display:flex;flex-direction:column;gap:12px;align-items:center}
+.about-detail{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--text);justify-content:center}
 .about-detail-icon{width:32px;height:32px;border-radius:6px;background:#e8f2fb;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 
 /* CONTACT */
@@ -215,7 +215,7 @@ footer{background:#040f1e;border-top:1px solid rgba(74,179,232,0.1);padding:24px
   .reviews{padding:60px 0}
   .lform-row{grid-template-columns:1fr}
   .about{padding:60px 0}
-  .about-inner{grid-template-columns:1fr;gap:32px}
+  .about-inner{flex-direction:column;gap:32px}
   .contact{padding:60px 0}
   .contact-inner{grid-template-columns:1fr;gap:32px}
   .form-row{grid-template-columns:1fr}
@@ -287,25 +287,21 @@ footer{background:#040f1e;border-top:1px solid rgba(74,179,232,0.1);padding:24px
     <div class="section-sub">From everyday repairs to full solar installations across Adelaide &amp; the Hills.</div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-num">01</div>
         <div class="service-icon-wrap"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3L4 12h6l-1 7 9-10h-6l1-6z" fill="#1a6fc4"/></svg></div>
         <div class="service-title">General electrical</div>
         <div class="service-desc">Powerpoints, lighting, switchboards, safety switches and all residential and commercial work.</div>
       </div>
       <div class="service-card">
-        <div class="service-num">02</div>
         <div class="service-icon-wrap"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="#1a6fc4" stroke-width="1.5"/><path d="M11 7v4l3 2" stroke="#1a6fc4" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <div class="service-title">Solar installations</div>
         <div class="service-desc">Grid-connected solar systems designed, installed and commissioned by a licensed electrician.</div>
       </div>
       <div class="service-card">
-        <div class="service-num">03</div>
         <div class="service-icon-wrap"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L2 12h7L7 20l13-11h-7l1-7z" stroke="#1a6fc4" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
         <div class="service-title">Faults &amp; emergencies</div>
         <div class="service-desc">Fast response to electrical faults, tripped circuits, and urgent safety issues — 24/7.</div>
       </div>
       <div class="service-card">
-        <div class="service-num">04</div>
         <div class="service-icon-wrap"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="6" width="16" height="12" rx="2" stroke="#1a6fc4" stroke-width="1.5"/><path d="M8 6V5a3 3 0 016 0v1" stroke="#1a6fc4" stroke-width="1.5"/></svg></div>
         <div class="service-title">New builds &amp; renos</div>
         <div class="service-desc">Full electrical fit-outs for new builds, renovations, extensions and commercial projects.</div>
@@ -336,26 +332,7 @@ footer{background:#040f1e;border-top:1px solid rgba(74,179,232,0.1);padding:24px
     <div class="section-title">Customer reviews</div>
     <div class="section-sub">Trusted by homeowners and businesses across Adelaide &amp; the Hills.</div>
 
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <div class="review-text">Lockie was fantastic — showed up on time, sorted our switchboard issue quickly and explained everything clearly. Highly recommend Energlow to anyone in the Hills.</div>
-        <div class="review-author">Sarah M.</div>
-        <div class="review-location">Stirling, SA</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <div class="review-text">Called at 8pm with a tripped safety switch and Lockie was there within the hour. Brilliant service, fair price. Will definitely use again.</div>
-        <div class="review-author">James T.</div>
-        <div class="review-location">Norwood, SA</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <div class="review-text">Used Energlow for our full kitchen reno electrical work. Clean, tidy, professional — lights and rangehood all working perfectly. Great value.</div>
-        <div class="review-author">Michelle &amp; Dan R.</div>
-        <div class="review-location">Burnside, SA</div>
-      </div>
-    </div>
+    <div class="reviews-grid" id="reviewsGrid"></div>
 
     <!-- Leave a review form -->
     <div class="review-form-wrap">
@@ -475,7 +452,7 @@ function submitReview() {
     return;
   }
   // Add review to grid
-  const grid = document.querySelector('.reviews-grid');
+  const grid = document.getElementById('reviewsGrid');
   const starsHtml = '★'.repeat(parseInt(rating)) + '☆'.repeat(5 - parseInt(rating));
   const card = document.createElement('div');
   card.className = 'review-card';
